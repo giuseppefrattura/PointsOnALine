@@ -1,6 +1,7 @@
 package com.giuseppefrattura.PointsOnaLine;
 
 import com.giuseppefrattura.PointsOnaLine.model.Point;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
@@ -233,6 +234,15 @@ class PointServiceImplTest {
         expectedneighbours.add(p1);
 
         assertEquals(expectedneighbours, neighbours);
+    }
+
+
+
+
+    @AfterEach
+    void clearList(){
+        PointController pc = new PointController();
+        pc.deleteAllPoints();
     }
 
 }

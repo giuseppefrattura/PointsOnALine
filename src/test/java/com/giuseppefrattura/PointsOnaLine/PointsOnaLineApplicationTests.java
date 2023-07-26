@@ -26,7 +26,6 @@ class PointsOnaLineApplicationTests {
 		Point p3 = new Point(2.5);
 		Point p4 = new Point(5);
 
-
 		pc.addPoint(p1);
 		pc.addPoint(p2);
 		pc.addPoint(p3);
@@ -51,8 +50,10 @@ class PointsOnaLineApplicationTests {
 		expectedDescBody.add(p3);
 		expectedDescBody.add(p1);
 
+		String expectedString= "[" + p2 + ", " + p3 +  ", " + p1 + "]";
+
 		assertNotEquals(expectedBody.toString(), descPoints.getBody().toString());
-		assertEquals(expectedDescBody.toString(), descPoints.getBody().toString());
+		assertEquals(expectedString, descPoints.getBody().toString());
 
 	}
 
